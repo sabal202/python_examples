@@ -4,7 +4,7 @@ lis = list(map(int, input().split()))
 points = dict([(lis[i], i) for i in range(n)])
 lenth = lis[-1] - lis[0]
 ks = []
-
+# TODO solve
 for k in range(1, 10001):
     j = lis[0]
 

@@ -7,11 +7,10 @@ sys.stdout = codecs.open("output.txt", "w+")
 
 A, N = list(map(int, input().split()))
 B = -1
-
-X = False
-for x in range(1, 10 ** 6):
-    if (A + 1) % (N * x + 1) == 0:
-        B = (x * N + 1) / (A + 1) - 1
+# TODO decrease time
+for b in range(10 ** 9):
+    if (b * (A + 1) + A) % N == 0:
+        B = b
         break
 
 print(B)

@@ -5,7 +5,7 @@ save_stdout = sys.stdout
 sys.stdin = codecs.open("input.txt", "r", "utf-8")
 sys.stdout = codecs.open("output.txt", "w+")
 
-
+# TODO solve
 def knapsack_dylp(A, B, C):
     print("A=", A, "B=", B, "C=", C)
     T = {0: 0}  # Хэш: самая большая стоимость набора для веса - {вес:стоимость}

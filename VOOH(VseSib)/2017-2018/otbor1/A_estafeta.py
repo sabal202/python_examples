@@ -6,7 +6,7 @@ sys.stdin = codecs.open("input.txt", "r", "utf-8")
 sys.stdout = codecs.open("output.txt", "w+")
 
 N, I = list(map(int, input().split()))
-
+# TODO decrease time
 times = []
 for __ in range(N):
     times.append(list(map(int, input().split())))
