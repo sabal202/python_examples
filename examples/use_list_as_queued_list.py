@@ -21,7 +21,6 @@ queue.remove(x)  # Remove the first occurrence of value.
 
 queue.count(x)  # Count the number of deque elements equal to x.
 
-queue.clear()  # Remove all elements from the deque leaving it with length 0.
 
 iterable = [i for i in range(10)]
 queue.extend(iterable)  # Extend the right side of the deque by appending elements from the iterable argument.
@@ -31,8 +30,6 @@ queue.extendleft(iterable)  # Extend the left side of the deque by appending ele
 
 queue.index(x)  # Return the position of x in the deque (at or after index start and before index stop)
 # Returns the first match or raises ValueError if not found.
-
-queue.remove(x)  # Remove the first occurrence of x. If not found, raises a ValueError.
 
 i = 3
 queue.insert(i, x)  # Insert x into the deque at position i.
@@ -49,5 +46,5 @@ queue.rotate(n)  # Rotate the deque n steps to the right. If n is negative, rota
 
 queue.maxlen  # Maximum size of a deque or None if unbounded.
 
-queue.clear()
+queue.clear()  # Remove all elements from the deque leaving it with length 0.
 print(queue)  # out: deque([])
