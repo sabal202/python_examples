@@ -1,8 +1,7 @@
-a = bin(int(input(), 2))[2:]
-s = ""
-for i in range(len(a)):
-    s += str(int(not bool(int(a[i]))))
-y = int(a, 2)
-print('{0:b}'.format(y))
-print(s)
-print(bool(int("0")))
+from functools import reduce
+from operator import itemgetter
+
+a_list = ['100', '10', '1']
+sorted_li = sorted(a_list, key=len, reverse=True)
+sorted_li.sort(key=int)
+print(reduce(lambda x, y: x + y, sorted_li))
