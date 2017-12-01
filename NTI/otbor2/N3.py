@@ -1,11 +1,11 @@
 N, M = list(map(int, input().split()))
 stones = list(map(int, input().split()))
 
-for i in range(M):
+for __ in range(M):
     command, index, num = input().split()
-    num = int(num)
-    index = int(index)
+    index, num = int(index), int(num)
+
     if command == "S":
         print(sum(stones[index:num + 1]))
-    else:
+    elif command == "M":
         stones[index] = num
