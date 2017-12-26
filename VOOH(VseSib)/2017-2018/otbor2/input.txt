@@ -1,0 +1,16 @@
+15
+new a
+state a < 1
+ask a < 1
+ask a < 0
+ask 0 < a
+ask 1 < a
+ask 2 < a
+state -3 < a
+ask a < 1
+ask a < 0
+ask 0 < a
+ask 1 < a
+ask 2 < a
+new b
+ask a < b
