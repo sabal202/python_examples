@@ -1,16 +1,9 @@
-15
-new a
-state a < 1
-ask a < 1
-ask a < 0
-ask 0 < a
-ask 1 < a
-ask 2 < a
-state -3 < a
-ask a < 1
-ask a < 0
-ask 0 < a
-ask 1 < a
-ask 2 < a
-new b
-ask a < b
+7 8
+1 2 white
+2 3 red
+3 4 white
+4 1 red
+7 1 white
+5 6 white
+1 5 red
+6 7 red

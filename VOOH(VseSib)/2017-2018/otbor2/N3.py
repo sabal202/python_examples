@@ -21,13 +21,15 @@ def cross(A, B):  # A < B
         B[0] = -1 * 10 ** 9 - 1
     if B[1] == "?":
         B[1] = 10 ** 9 + 1
-
+    a, b = set(), set()
+    for i in range(A[0] + 1, A[1]):
+        a.add(i)
+    for i in range(B[0] + 1, B[1]):
+        b.add(i)
+    c = a.difference(b)
+    print(c)
     C = [min(), 0]
-
-    if C[0] == -1 * 10 ** 9 - 1:
-        C[0] = "?"
-    if C[1] == 10 ** 9 + 1:
-        C[1] = "?"
+    al, bl, cl = len(A)
 
 
 for i in range(n):
@@ -40,7 +42,7 @@ for i in range(n):
         a, b = line[1:]
         a_i, b_i = re.search(num, a), re.search(num, b)
         if a_i is None and b_i is None:
-            if a
+            pass
         elif a_i is None and not b_i is None:
             s[a][1] = int(b)
         elif not a_i is None and b_i is None:
