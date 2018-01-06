@@ -1,2 +1,3 @@
-import tkinter.colorchooser
+import tkinter
+
 print("")

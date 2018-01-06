@@ -1,5 +1,4 @@
 import sys, codecs
-import collections
 
 save_stdin = sys.stdin
 save_stdout = sys.stdout
@@ -17,17 +16,17 @@ for __ in range(M):
     matrix[a][b] = (True, d)
     matrix[b][a] = (True, d)
 
-st = collections.deque()
+st = list()
 st.append(0)
 res = []
+last = -1
 first = True
-while len(st) != 0:
+while st:
     v = st[-1]
     i = 0
     while i < N:
         if matrix[v][i][0]:
             if not first:
-
                 if matrix[v][i][1] != last:
                     last = matrix[v][i][1]
                     break
@@ -36,7 +35,6 @@ while len(st) != 0:
                 last = matrix[v][i][1]
                 break
         i += 1
-
     if i == N:
         res.append(st.pop())
     else:
@@ -44,5 +42,5 @@ while len(st) != 0:
         matrix[i][v] = (False, False)
         st.append(i)
 
-for i in range(len(res)):
-    print(res[i] + 1, end=" ")
+for i in res:
+    print(i + 1, end=" ")

@@ -6,9 +6,10 @@ sys.stdin = codecs.open("input.txt", "r", "utf-8")
 sys.stdout = codecs.open("output.txt", "w+")
 
 
+# checks right brackets sequences, if it is not, returns place of error
 def is_balanced(line):
-    opener = ("[", "{", "(")
-    closer = ("]", "}", ")")
+    opener = ("[", "{", "(", "<", '"', "'")
+    closer = ("]", "}", ")", ">", '"', "'")
     b = 1
     stack = []
     for br in line:
@@ -31,8 +32,8 @@ def is_balanced(line):
 
 line = input()
 
-a, ba = is_balanced(line)
+a, b = is_balanced(line)
 if a:
-    print("Success")
+    print("Right")
 else:
-    print(ba)
+    print(b)
