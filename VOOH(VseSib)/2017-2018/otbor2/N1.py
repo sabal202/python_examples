@@ -8,20 +8,29 @@ sys.stdout = codecs.open("output.txt", "w+")
 
 N = int(input())
 
-l = [N]
-s = N
-ll = deque(reversed(range(1, N)))
+l = []
+s = 0
+ll = deque(range(N, 0, -1))
 bad = False
-for i in range(1, N):
-    c = s
-    for j in ll:
-        if s % j == 0:
-            l.append(j)
-            s += j
-            ll.remove(j)
+badbad = False
+for k in range(1, N):
+    bad = False
+    for i in range(0, N):
+        c = s
+        ll1 = list(ll)
+        for j in ll1:
+            if s % j == 0:
+                l.append(j)
+                s += j
+                ll1.remove(j)
+                break
+        if c == s:
+            bad = True
             break
-    if c == s:
-        bad = True
+        if len(l) == N:
+            badbad = True
+            break
+    if badbad:
         break
 
 if bad:
